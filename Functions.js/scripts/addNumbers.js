@@ -5,7 +5,10 @@ function addNumbers(numbers){
     let total = 0;
 
     arrayOfNumber.map((number) => {
-        total += parseFloat(number);
+        var convertN = parseFloat(number);
+        if(!isNaN(convertN)) {
+            total += parseFloat(convertN);
+        }
     })
 
     console.log(`The numbers ${arrayOfNumber} - Totals: ${total}`)
